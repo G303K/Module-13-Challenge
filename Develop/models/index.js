@@ -1,17 +1,35 @@
-// import models
-const Product = require('./Product');
-const Category = require('./Category');
-const Tag = require('./Tag');
-const ProductTag = require('./ProductTag');
+// Import Sequelize and create an instance of it
+const Sequelize = require('sequelize');
+const sequelize = new Sequelize('your_database', 'your_username', 'your_password', {
+  host: 'localhost',
+  dialect: 'mysql' // Change this to your database type
+});
 
-// Products belongsTo Category
+// Define your models
+const Product = sequelize.define('Product', {
+  // Define Product model attributes here
+});
 
-// Categories have many Products
+const Category = sequelize.define('Category', {
+  // Define Category model attributes here
+});
 
-// Products belongToMany Tags (through ProductTag)
+const Tag = sequelize.define('Tag', {
+  // Define Tag model attributes here
+});
 
-// Tags belongToMany Products (through ProductTag)
+const ProductTag = sequelize.define('ProductTag', {
+  // Define ProductTag model attributes here
+});
 
+// Define associations
+Product.belongsTo(Category);
+Category.hasMany(Product);
+
+Product.belongsToMany(Tag, { through: ProductTag });
+Tag.belongsToMany(Product, { through: ProductTag });
+
+// Export the models
 module.exports = {
   Product,
   Category,
