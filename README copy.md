@@ -35,7 +35,7 @@ THEN I am able to successfully create, update, and delete data in my database
 
 ## Google Drive Video Link
 
-- https://drive.google.com/file/d/1Mf8BCqgF3VxE0cWnKU8gXOx6NnmR3j9O/view
+- https://drive.google.com/file/d/1MemBryZTXtjBfOJKa2A2fYjjcMrHoL33/view
 
 ## Installation
 
@@ -55,7 +55,7 @@ To use, first download the above required applications in [Installation](#instal
 - To view content used, expand the MODULE-13-CHALLENGE folder.
 - In the root directory run "npm i" to install all packages.
 - Initalize MySQL2 in the terminal and load the required .sql files to create the local database.
-- Open server.js in an integrated terminal and type "node index.js" to start the process.
+- Open server.js in an integrated terminal and type "node index.js" to start the user prompts.
 
 ## Contributors:
 
